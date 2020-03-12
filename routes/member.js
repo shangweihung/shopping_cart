@@ -1,10 +1,7 @@
-
-
-
-/*var express = require('express');
+var express = require('express');
 var router = express.Router();
 
-const MemberModifyMethod = require('../controllers/modify_controller');
+const MemberModifyMethod = require('../controllers/member/modify_controller');
 
 memberModifyMethod = new MemberModifyMethod();
 
@@ -21,4 +18,3 @@ router.put('/update', memberModifyMethod.putUpdate);
 router.put('/updateimg', memberModifyMethod.putUpdateImage);
 
 module.exports = router;
-*/
