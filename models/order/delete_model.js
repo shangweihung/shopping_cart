@@ -1,5 +1,5 @@
 
-const db = require('../../models/connection_db');
+const db = require('../connection_db');
 
 module.exports = function orderDelete(deleteList){
     let result = {}
@@ -11,11 +11,11 @@ module.exports = function orderDelete(deleteList){
             if ( existData === false) {
                 result.status = "刪除訂單資料失敗。"
                 result.err =  "找不到該筆資料。"
-                reject(err)
+                reject(result)
             } else if ( completeOrder === false) {
                 result.status = "刪除訂單資料失敗。"
                 result.err =  "該筆資料已完成。"
-                reject(err)
+                reject(result)
             } else if ( existData === true && completeOrder === true) {
                 db.query('DELETE FROM order_list WHERE order_id = ? AND member_id = ? AND product_id = ?', 
                 [deleteList[key].orderID, deleteList[key].memberID, deleteList[key].productID], function (err, rows) {

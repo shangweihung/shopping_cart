@@ -25,4 +25,7 @@ router.delete('/order', orderModifyMethod.deleteOrderProduct);
 // Book an order (one product)
 router.post('/order/addoneproduct', orderModifyMethod.postOrderOneProduct);
 
+// Complete an order
+router.put('/order/complete', orderModifyMethod.putProductComplete);
+
 module.exports = router;

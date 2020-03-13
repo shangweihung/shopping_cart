@@ -7,5 +7,9 @@ module.exports = {
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE
     },
-    secret: process.env.MY_SECRET
+    secret: process.env.MY_SECRET, 
+    senderMail: {
+      user: process.env.SEND_MAIL_USER,
+      password: process.env.SEND_MAIL_PASSWORD
+    }
 }

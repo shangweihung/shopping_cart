@@ -1,4 +1,4 @@
-const db = require("../../models/connection_db");
+const db = require("../connection_db");
 
 module.exports = function postOrderDate(orderOneList){
     let result = {}
