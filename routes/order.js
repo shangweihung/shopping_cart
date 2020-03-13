@@ -19,4 +19,10 @@ router.post('/order', orderModifyMethod.postOrderAllProduct);
 // Edit an order
 router.put('/order', orderModifyMethod.updateOrderProduct);
 
+// Delete an order
+router.delete('/order', orderModifyMethod.deleteOrderProduct);
+
+// Book an order (one product)
+router.post('/order/addoneproduct', orderModifyMethod.postOrderOneProduct);
+
 module.exports = router;
